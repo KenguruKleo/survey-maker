@@ -5,7 +5,8 @@ deploy:
   provider: heroku
   api_key:
     secure: gzOpasIq1uCDmB5hHrTXID3Djck/YjMH39iIF8w83qWbWXPL+fP9qhwP6wjDSvnEu+qCfTi6ReRywYfcOF3Gw+md8dyRK5nF5O+MNRSBQdVrfaRu/Z4TsghQ/rq2r/6g6UuGvYuNoe9p965DOghqDMSD9IxjzRUeFiiRZUlECCThdMz45oWXkubg/WSpkiWenqeJumhKxroG34kCZ4V0uXxUchRYwG2ZxyiJExVLlwBV8x+IP93kpFrLXsk9t2jpdMf6bN9S7hvGsX9Y348VW+y2SfFAsDBX4mqVjPjjIDua7e+r1ILO32xrTRr/OwKQr8wiIQ5HZjhoqSoK81tSskBmEZ3pZ4z/ca8k+tGEE87qefZSOpsQr3R/UOkSy7fYnQwb4J/cbZzqD6+k9VTftuqdgEyjZQLX90AwKHTx6BMdkCqjSB0oZuezv5yRM7CemJPedpSy24UBTMGU3UO8eALyrnEdwGOYWFYwU9wk5X1W55EiIfiVo6w0vrAHYpG97WaHSyaYq2qtlTtVXdoaLx5aFPOwttRDLFTbl8+RcFnRBBFJtEuBIJD+oOIn9Pw9APIQ8VCO7PDQh2BjEQ6kAFAuOgLz0bRkRY1nzOCCJoNdGkyJ9ggD4zI9UnmCYQ/mKu7XUflbbOxd4232bduYHxAK/U/9776/uS5JKXx19sA=
-  strategy: git
+  skip_cleanup: true
+  strategy: api
   app: kengurukleo-survey-maker
   on:
     repo: KenguruKleo/survey-maker
