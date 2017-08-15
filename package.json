@@ -1,14 +1,14 @@
 {
   "name": "survey-maker",
   "version": "1.0.0",
-  "email" : "k.yemelianov@gmail.com",
+  "email": "k.yemelianov@gmail.com",
   "author": "Konstantin Yemelianov",
   "license": "ISC",
   "description": "",
   "main": "./server/index.js",
-  "repository" :
-  { "type" : "git"
-  , "url" : "https://github.com/KenguruKleo/survey-maker.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KenguruKleo/survey-maker.git"
   },
   "engines": {
     "node": ">=8.1.1",
@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "express": "^4.15.4",
+    "mongoose": "^4.11.7",
     "nodemon": "^1.11.0",
     "passport": "^0.4.0",
     "passport-google-oauth20": "^1.0.0"
