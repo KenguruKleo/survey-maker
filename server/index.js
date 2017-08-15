@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const keys = require('../keys');
+require('./models/User');
 require('./services/passport');
 
 mongoose.Promise = global.Promise;
