@@ -4,5 +4,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 node_modules/
-keys.js
+keys.dev.js
+keys.prod.js
 .idea
+secrets.tar
