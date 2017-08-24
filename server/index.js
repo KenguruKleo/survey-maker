@@ -7,16 +7,18 @@ require('./models/User');
 require('./services/passport');
 
 mongoose.Promise = global.Promise;
-mongoose.connect( keys.mongoURI, { useMongoClient: true } )
+const MONGO_URI = keys.mongoURI || process.env.PORT;
+mongoose.connect( MONGO_URI, { useMongoClient: true } )
     .then( db => console.log('Successfully connect to MongoDB') )
     .catch( err => console.log('Error connecting to MongoDB: '+err) );
 
 const app = express();
 
+const COOKIE_KEY = keys.cookieKey || process.env.COOKIE_KEY;
 app.use(
     cookieSession({
         maxAge: 30 * 24 * 3600 * 1000,
-        keys: [ keys.cookieKey ]
+        keys: [ COOKIE_KEY ]
     })
 );
 app.use(passport.initialize());
