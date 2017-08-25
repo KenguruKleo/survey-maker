@@ -8,3 +8,5 @@ keys.dev.js
 keys.prod.js
 .idea
 secrets.tar
+build
+client/src/css/*.css
