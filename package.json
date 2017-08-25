@@ -18,7 +18,8 @@
     "start": "node ./server/index.js",
     "server": "nodemon ./server/index.js",
     "client": "npm run start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "watch-css": "npm run watch-css --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\" \"npm run watch-css\"",
     "test": "echo \"Information: no test specified\" && exit 0"
   },
   "dependencies": {

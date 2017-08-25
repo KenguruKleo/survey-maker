@@ -1,0 +1,9 @@
+@import "../../node_modules/materialize-css/sass/components/color";
+$roboto-font-path: "../../node_modules/materialize-css/dist/fonts/roboto/" !default;
+@import "../../node_modules/materialize-css/sass/components/variables";
+@import "../../node_modules/materialize-css/sass/components/roboto";
+@import "../../node_modules/materialize-css/sass/materialize";
+
+h2 {
+  color: rebeccapurple;
+}
