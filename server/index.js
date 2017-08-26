@@ -1,4 +1,5 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
@@ -14,6 +15,8 @@ mongoose.connect( MONGO_URI, { useMongoClient: true } )
 
 const app = express();
 
+app.use( bodyParser.json() );
+
 const COOKIE_KEY = keys.cookieKey || process.env.COOKIE_KEY;
 app.use(
     cookieSession({
@@ -25,6 +28,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 require('./routes/authRoutes')(app);
+require('./routes/billingRoutes')(app);
 
 const PORT = process.env.PORT || 5000;
 console.log('Start application on PORT='+PORT);

@@ -25,7 +25,9 @@ passport.use(
             const existingUser = await User.findOne({ googleId: profile.id });
 
             if( existingUser ){
-                return done( null, existingUser );
+                existingUser.lastVisitedAt = new Date();
+                const updatedUser = await existingUser.save();
+                return done( null, updatedUser );
             }
 
             const newUser = await new User({ googleId: profile.id }).save();
