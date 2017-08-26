@@ -8,7 +8,7 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import reduxThunk from 'redux-thunk';
 import App from './components/App';
 import reducers from './reducers';
-import registerServiceWorker from './registerServiceWorker';
+//import registerServiceWorker from './registerServiceWorker';
 
 const middleware = [reduxThunk];
 const store = createStore(reducers, {}, compose(
@@ -23,6 +23,6 @@ ReactDOM.render(
     document.getElementById('root')
 );
 
-registerServiceWorker();
+//registerServiceWorker();
 
 console.log("Environment is ", process.env.NODE_ENV);
