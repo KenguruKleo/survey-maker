@@ -18,9 +18,10 @@
   },
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src src/ -o src/",
-    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src src/ -o src/ --watch --recursive",
+    "watch-css": "node-sass-chokidar --include-path ./src src/ -o src/ --watch --recursive",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build-client": "react-scripts build",
+    "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
