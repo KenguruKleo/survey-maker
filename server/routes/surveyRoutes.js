@@ -19,8 +19,22 @@ module.exports = app => {
             dateSend: Date.now()
         });
 
-        //send email
         const mailer = new Mailer( survey, surveyTemplate(survey) );
+
+        try{
+            const sendMailResult = await mailer.send();
+
+            if ( sendMailResult.statusCode === 202 ){
+                await survey.save();
+                req.user.credits -= 1;
+                const user = await req.user.save();
+
+                res.send(user);
+            }
+        } catch (err){
+            const error = 'Error: ' + (err.response && err.response.body && err.response.body.errors || err);
+            res.status(422).send({error});
+        }
 
     });
 };
