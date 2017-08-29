@@ -1,3 +1,6 @@
+const keys = require('../../config/keys');
+const redirectDomain = keys.redirectDomain || process.env.REDIRECT_DOMAIN;
+
 module.exports = ( survey )=>{
     return `
 <html>
@@ -5,8 +8,8 @@ module.exports = ( survey )=>{
         <h3>Survey maker</h3>
         <div>${survey.body}</div>
         <div>
-            <a href="http://localhost:3000/yes">Yes</a>
-            <a href="http://localhost:3000/no">No</a>
+            <a href="${redirectDomain}/api/surveys/thanks">Yes</a>
+            <a href="${redirectDomain}/api/surveys/thanks">No</a>
         </div>
     </div>
 </html>
